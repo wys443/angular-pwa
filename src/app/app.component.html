@@ -1,15 +1,5 @@
 <div class="container-fluid py-3">
-  <h1>Angular Progressive Web Application (PWA)</h1>
-
-  <div class="row my-5">
-    <div class="col text-end">
-      Status:
-    </div>
-    <div class="col">
-      <span class="badge bg-success" *ngIf="isOnline">Online</span>
-      <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
-    </div>
-  </div>
+  <h1> Progressive Web Application (PWA)</h1>
 </div>
 
 <div class="w-100 position-absolute top-0" *ngIf="modalVersion">
@@ -19,7 +9,7 @@
   </div>
 </div>
 
-<div class="w-100 position-absolute bottom-0" *ngIf="modalPwaPlatform === 'ANDROID' || modalPwaPlatform === 'IOS'">
+<div class="w-100 position-absolute bottom-0 card" >
   <div class="alert alert-secondary m-2">
     <button type="button" class="btn-close position-absolute top-0 end-0 m-1" aria-label="Close" (click)="closePwa()"></button>
     <!-- Android -->

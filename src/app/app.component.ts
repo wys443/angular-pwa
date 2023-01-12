@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   isOnline: boolean;
   modalVersion: boolean;
-  modalPwaEvent: any;
+  modalPwaEvent: any; 
   modalPwaPlatform: string|undefined;
 
   constructor(private platform: Platform,
@@ -24,9 +24,7 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.updateOnlineStatus();
 
-    window.addEventListener('online',  this.updateOnlineStatus.bind(this));
-    window.addEventListener('offline', this.updateOnlineStatus.bind(this));
-
+  
     if (this.swUpdate.isEnabled) {
       this.swUpdate.versionUpdates.pipe(
         filter((evt: any): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
